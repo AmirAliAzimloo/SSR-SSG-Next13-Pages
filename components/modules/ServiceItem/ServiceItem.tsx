@@ -1,11 +1,21 @@
 import React from "react";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { IconProp, config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTruck, faTable } from "@fortawesome/free-solid-svg-icons";
+import * as Icons from "@fortawesome/free-solid-svg-icons" ;
+
+
 interface ServiceItemProps {
   title: string;
   desc: string;
   img: string;
-  icon: string;
+  icon: keyof typeof Icons;
 }
+
+
 
 function ServiceItem({ title, desc, img, icon }: ServiceItemProps) {
   return (
@@ -17,7 +27,23 @@ function ServiceItem({ title, desc, img, icon }: ServiceItemProps) {
         </div>
         <div className="col-sm-7">
           <h4>
-            <i className="fa fa-truck service-icon"></i>
+            {/* <i className="fa fa-truck service-icon"></i> */}
+            <div
+              style={{
+                background: "#da9f5b",
+                borderRadius: "100%",
+                height: "35px",
+                width: "40px",
+                textAlign: "center",
+              }}
+            >
+              <FontAwesomeIcon
+                // icon={faTruck}
+                icon={Icons[icon] as IconProp}
+                style={{ fontSize: "1rem", margin: "0,auto" }}
+              />
+            </div>
+
             {title}
           </h4>
           <p className="m-0">{desc}</p>

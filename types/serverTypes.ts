@@ -7,3 +7,14 @@ export interface ServicesTypes {
   desc: string;
   icon: keyof typeof Icons;
 }
+
+export interface MenuTypes {
+  id: number;
+  title: string;
+  price: number;
+  desc: string;
+  score: number;
+  off: number;
+  type: string;
+  img: string;
+}

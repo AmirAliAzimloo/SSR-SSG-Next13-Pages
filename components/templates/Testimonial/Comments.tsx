@@ -7,7 +7,6 @@ interface CommentsProps{
 }
 
 function Comments({ data }:CommentsProps) {
-  console.log("Comments =>", data);
 
   return (
     <div className="container-fluid py-5">

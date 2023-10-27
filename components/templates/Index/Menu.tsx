@@ -7,7 +7,6 @@ interface MenuProps{
 }
 
 function Menu({ data }:MenuProps) {
-  console.log("Menu =>", data);
 
   return (
     <div className="container-fluid pt-5">

@@ -14,7 +14,7 @@ function Comments({ data }:CommentsProps) {
         <div className="section-title">
           <h4
             className="text-primary text-uppercase"
-            style={{ letterSpacing: "5px" }}
+            style={{ letterSpacing: "5px" }} 
           >
             Testimonial
           </h4>

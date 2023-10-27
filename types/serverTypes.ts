@@ -18,3 +18,11 @@ export interface MenuTypes {
   type: string;
   img: string;
 }
+
+export interface CommentsTypes {
+  id: number;
+  username: string;
+  productID: number;
+  body: string;
+  profile: string;
+}

@@ -1,7 +1,32 @@
+import Testimonial from "@/components/modules/Testimonial/Testimonial";
+import { CommentsTypes } from "@/types/serverTypes";
 import React from "react";
 
-function Testimonial() {
-  return <div>Testimonial</div>;
+interface TestimonialsProps{
+  data:CommentsTypes[]
 }
 
-export default Testimonial;
+function Testimonials({ data }:TestimonialsProps) {
+  return (
+    <div className="container-fluid py-5">
+      <div className="container">
+        <div className="section-title">
+          <h4
+            className="text-primary text-uppercase"
+            style={{ letterSpacing: "5px" }}
+          >
+            Testimonial
+          </h4>
+          <h1 className="display-4">Our Clients Say</h1>
+        </div>
+        <div className="owl-carousel testimonial-carousel">
+          {data.slice(0, 4).map((comment) => (
+            <Testimonial {...comment} key={comment.id} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Testimonials;

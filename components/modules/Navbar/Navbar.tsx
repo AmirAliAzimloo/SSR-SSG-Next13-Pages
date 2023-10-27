@@ -24,18 +24,18 @@ function Navbar() {
           id="navbarCollapse"
         >
           <div className={`${styles.navbar_nav} ml-auto p-4`}>
-            <a
-              href="index.html"
+            <Link
+              href="/"
               className={`${styles.nav_link} ${styles.active_nav_link}`}
             >
               Home
-            </a>
+            </Link>
             <Link href="/about" className={`${styles.nav_link}`}>
               About
             </Link>
-            <a href="service.html" className={`${styles.nav_link}`}>
+            <Link href="/Services" className={`${styles.nav_link}`}>
               Service
-            </a>
+            </Link>
             <a href="menu.html" className={`${styles.nav_link}`}>
               Menu
             </a>
